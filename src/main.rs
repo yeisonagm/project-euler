@@ -3,7 +3,7 @@ use std::fs;
 use std::io;
 use std::io::Write;
 
-
+mod math_operations;
 mod problems;
 
 use problems::*;
@@ -57,8 +57,9 @@ fn show_menu(problems: &Vec<String>) -> u16 {
 }
 
 fn run_problem(problem: u16) {
-    match problem {
+match problem {
         1 => p001_multiples_of_3_or_5::solve(),
+        2 => p002_even_fibonacci_numbers::solve(),
         _ => println!("Choose a fixed issue to run"),
     }
 }
@@ -69,7 +70,5 @@ fn main() {
     problems.sort();
 
     let problem = show_menu(&problems);
-    println!("\n\t\tProblem {}\n", problem);
-
     run_problem(problem)
 }
