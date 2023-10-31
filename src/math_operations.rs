@@ -70,3 +70,52 @@ pub fn fibonacci_terms(n: u32) -> Vec<u32> {
         .take_while(|&fi| fi < n)
         .collect()
 }
+
+/// Checks if a given integer is a prime number.
+///
+/// This function determines whether the input integer is a prime number by
+/// checking if it has any divisors other than 1 and itself.
+///
+/// # Parameters
+///
+/// - `number`: A generic integer type that you want to check for primality.
+///
+/// # Returns
+///
+/// A boolean value `true` if the input number is prime, `false` otherwise.
+///
+/// # Example
+///
+/// ```
+/// use project_euler::math_operations::is_prime;
+///
+/// let prime_number: u64 = 17;
+/// let non_prime_number: u32 = 4;
+///
+/// assert_eq!(is_prime(prime_number), true);
+/// assert_eq!(is_prime(non_prime_number), false);
+/// ```
+///
+/// # Note
+///
+/// A prime number is a positive integer greater than 1 that has no positive
+/// divisors other than 1 and itself. The function returns `false` for numbers
+/// less than 2, as they are not prime by definition.
+pub fn is_prime<T>(number: T) -> bool
+where
+    T: Into<u64>,
+{
+    let number: u64 = number.into();
+    if number < 2 {
+        return false;
+    }
+    let n = (number as f64).sqrt().abs() as u64;
+
+    for i in 2..=n {
+        if number % i == 0 {
+            return false;
+        }
+    }
+    true
+}
+
