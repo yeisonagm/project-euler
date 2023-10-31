@@ -60,6 +60,7 @@ fn run_problem(problem: u16) {
 match problem {
         1 => p001_multiples_of_3_or_5::solve(),
         2 => p002_even_fibonacci_numbers::solve(),
+        3 => p003_largest_prime_factor::solve(),
         _ => println!("Choose a fixed issue to run"),
     }
 }

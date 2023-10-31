@@ -13,7 +13,7 @@ use crate::math_operations::fibonacci_terms;
 ///     2, 8, 34
 /// The sum is 44.
 ///
-/// ## Returns:
+/// ## Note:
 /// By considering the terms in the Fibonacci sequence whose values do not exceed four million, find the sum of the even-valued terms.
 pub fn solve() {
     println!("\n\t\t\tProblem 002: Even Fibonacci Numbers\n");
