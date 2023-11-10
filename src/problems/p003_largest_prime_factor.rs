@@ -13,6 +13,8 @@ use crate::math_operations::is_prime;
 /// ## Note:
 /// Show the largest prime factor of the number 600851475143.
 pub fn solve() {
+    println!("\n\t\t\tProblem 003: Large prime factors\n");
+
     let number = 600851475143;
     let primes_factors = primes_factors(number);
     println!("The prime factors of {} are: {:?}", number, primes_factors);

@@ -11,6 +11,8 @@
 /// ## Note:
 /// The sum of all the multiples of 3 or 5 below the specified limit.
 pub fn solve() {
+    println!("\n\t\t\tProblem 001: Multiples of 3 or 5\n");
+
     print!("The sum of multiples below than 10 is ");
     let multiples_10 = multiples_3or5(10);
     println!("{}", multiples_10.into_iter().sum::<u32>());
