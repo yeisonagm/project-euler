@@ -48,3 +48,24 @@ fn test_is_prime() {
     assert_eq!(is_prime(9999u64), false);
     assert_eq!(is_prime(10017u64), false);
 }
+
+
+/// Test cases with positive numbers for the is_palindrome function.
+#[test]
+fn test_is_palindrome_positive() {
+    assert_eq!(is_palindrome(505), true);
+    assert_eq!(is_palindrome(9009), true);
+    assert_eq!(is_palindrome(12321), true);
+    assert_eq!(is_palindrome(123421), false);
+    assert_eq!(is_palindrome(579057), false);
+}
+
+/// Test cases with negative numbers for the is_palindrome function.
+#[test]
+fn test_is_palindrome_negative() {
+    assert_eq!(is_palindrome(-525), true);
+    assert_eq!(is_palindrome(-1221), true);
+    assert_eq!(is_palindrome(-9009), true);
+    assert_eq!(is_palindrome(-122), false);
+    assert_eq!(is_palindrome(-61761), false);
+}

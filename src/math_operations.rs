@@ -119,3 +119,36 @@ where
     true
 }
 
+/// Checks if a number is a palindrome.
+///
+/// A palindrome is a number that reads the same forward as backward.
+///
+/// # Arguments
+///
+/// * `number` - The number to check for palindrome property.
+///
+/// # Returns
+///
+/// Returns `true` if the number is a palindrome, and `false` otherwise.
+///
+/// # Examples
+///
+/// ```
+/// use project_euler::math_operations::is_palindrome;
+///
+/// assert_eq!(is_palindrome(121), true);
+/// assert_eq!(is_palindrome(123), false);
+/// ```
+///
+/// # Note
+///
+/// This function treats negative numbers as palindromic, considering only the absolute value.
+/// ```
+/// use project_euler::math_operations::is_palindrome;
+/// assert_eq!(is_palindrome(-121), true);
+/// ```
+pub fn is_palindrome(number: i32) -> bool {
+    let num = number.abs().to_string();
+    let reversed = num.chars().rev().collect::<String>();
+    num == reversed
+}
