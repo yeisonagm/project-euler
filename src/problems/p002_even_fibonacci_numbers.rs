@@ -17,7 +17,7 @@ use crate::math_operations::fibonacci_terms;
 /// By considering the terms in the Fibonacci sequence whose values do not exceed four million, find the sum of the even-valued terms.
 pub fn solve() {
     println!("\n\t\t\tProblem 002: Even Fibonacci Numbers\n");
-    
+
     let n = 4_000_000;
     let terms = even_fibonacci_numbers(n);
     let msm = "Even Fibonacci sequence whose values do not exceed four million:";
@@ -34,35 +34,8 @@ fn even_fibonacci_numbers(n: u32) -> Vec<u32> {
 }
 
 #[cfg(test)]
-mod test {
+mod tests {
     use super::*;
-    use crate::math_operations::fibonacci;
-
-    #[test]
-    fn test_fibonacci_term() {
-        assert_eq!(1, fibonacci(1));
-        assert_eq!(1, fibonacci(2));
-        assert_eq!(2, fibonacci(3));
-        assert_eq!(3, fibonacci(4));
-        assert_eq!(5, fibonacci(5));
-        assert_eq!(89, fibonacci(11));
-    }
-
-    #[test]
-    #[should_panic]
-    fn test_fibonacci_panic() {
-        fibonacci(0);
-    }
-
-    #[test]
-    fn test_fibonacci_terms() {
-        assert_eq!(fibonacci_terms(0), vec![]);
-        assert_eq!(fibonacci_terms(2), vec![1, 1]);
-        assert_eq!(fibonacci_terms(5), vec![1, 1, 2, 3]);
-        assert_eq!(fibonacci_terms(10), vec![1, 1, 2, 3, 5, 8]);
-        let terms = vec![1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89];
-        assert_eq!(fibonacci_terms(100), terms);
-    }
 
     #[test]
     fn test_even_fibonacci_terms() {
