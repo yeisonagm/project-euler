@@ -4,3 +4,4 @@ pub mod p001_multiples_of_3_or_5;
 pub mod p002_even_fibonacci_numbers;
 pub mod p003_largest_prime_factor;
 pub mod p004_largest_palindrome_product;
+pub mod p005_smallest_multiple;

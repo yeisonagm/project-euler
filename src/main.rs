@@ -62,6 +62,7 @@ match problem {
         2 => p002_even_fibonacci_numbers::solve(),
         3 => p003_largest_prime_factor::solve(),
         4 => p004_largest_palindrome_product::solve(),
+        5 => p005_smallest_multiple::solve(),
         _ => println!("Choose a fixed issue to run"),
     }
 }
