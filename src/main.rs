@@ -63,6 +63,7 @@ match problem {
         3 => p003_largest_prime_factor::solve(),
         4 => p004_largest_palindrome_product::solve(),
         5 => p005_smallest_multiple::solve(),
+        6 => p006_sum_square_difference::solve(),
         _ => println!("Choose a fixed issue to run"),
     }
 }
